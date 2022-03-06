@@ -1,12 +1,21 @@
+import os
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from openpyxl import Workbook
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def initialize_credentials():
+    """
+    Initialization for google cloud console
+    :return:
+    """
     # initializations
-    cred = credentials.Certificate('kashpoa-693bd-84ce05964292.json')
+    key_file = os.getenv("KASHPOA_CREDENTIALS")
+    cred = credentials.Certificate(key_file)
     firebase_admin.initialize_app(cred)
     db = firestore.client()
     return db
