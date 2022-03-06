@@ -6,10 +6,6 @@ __pycache__
 __pycache__**
 db.sqlite3
 media
-wwsb/settings/local.py
-wwsb/staticfiles
-wwsb/db.sqlite3
-wwsb_env
 
 # Backup files #
 *.bak
