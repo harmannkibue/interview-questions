@@ -17,23 +17,23 @@ Question: Does it work only with 2 dimensional arrays only or should be scalable
 """
 
 
-def generate(arr=list) -> list:
+def generate(arr:list) -> list:
     """
     :param arr:
     :return generated list:
     """
     column = len(arr[0])
     new_arr = [[""] * column for _ in range(column)]
-    new_count = 0
+    count = 0
 
     for i in range(column):
-        count = 0
+        new_count = 0
         # Using this value allows expansion of the list columns
         row = 1 if i < len(arr) else len(arr) - 1
         for j in range(column):
-            new_arr[i][j] = '{} {}'.format(arr[0][new_count], arr[row][count])
-            count += 1
-        new_count += 1
+            new_arr[i][j] = '{} {}'.format(arr[0][count], arr[row][new_count])
+            new_count += 1
+        count += 1
     return new_arr
 
 

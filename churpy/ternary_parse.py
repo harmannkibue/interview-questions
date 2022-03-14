@@ -19,7 +19,7 @@ Steps: 1.If my operator is if we add the expression as the left subtree
 
 
 class ParseTernary:
-    # Todo: Check on error handiling and exceptions
+    # Todo: Check on error handling and exceptions
 
     def __init__(self, expression):
         self.expression = expression
@@ -87,3 +87,9 @@ if (var_1 == 2, 0, if (var_2 == 4, 15, 0))
 
 c = ParseTernary(input)
 c.parse_ternary()
+
+
+
+
+
+
