@@ -1,5 +1,4 @@
 import math
-arr = [1, 4, 5, 8, 2, 9, 13, 3]
 
 
 class BinarySearch:
@@ -33,7 +32,10 @@ class BinarySearch:
 
         return result
 
+
+# For testing purposes
+arr = [1, 4, 5, 8, 2, 9, 13, 3]
 a = BinarySearch(arr, 9)
-print(a.binary_search(arr, 9))
+print(a.binary_search(arr, 13))
 
 # [1, 2, 3, 4, 5, 8, 9, 13]
