@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 
-source ./git_line_separator.sh
+source ./line_separator.sh
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 
-echo "Pushing to branch ${BRANCH}"
-# Function call from the source import above
-echo
-repeat_space 20
 # Showing git status.Copy files to add.
+repeat_space 20
 echo "YOUR GIT STATUS: "
 git status
+# Function call from the source import above
 repeat_space 20
+echo "Pushing to branch ${BRANCH}"
+repeat_space 20
+echo
 echo -n "Enter file path() to commit, (Press enter to commit all): "
 read FILE_PATH
 
