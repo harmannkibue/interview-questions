@@ -28,16 +28,24 @@ def quickstart_get_collection():
     return docs
 
 
+# Todo: To be worked on. 1.Add the upper alphabet list
+def set_headers(sheet, header_names: list):
+    header_value = ["A""Z"]
+
+    for i in range(len(header_names)):
+        header_anotation = header_value[i] + str(i+1)
+        sheet[header_anotation] = header_names[i]
+    return sheet
+
+
 def write_xls_file():
     print("FUnction called")
     docs = quickstart_get_collection()
     workbook = Workbook()
     sheet = workbook.active
 
-    sheet["A1"] = "NAME"
-    sheet["B1"] = "EMAIL"
-    sheet["C1"] = "PHONE"
-    sheet["D1"] = "LOCATION"
+    # Todo: To be passed
+    sheet = set_headers(sheet, ["NAME", "EMAIL", "PHONE", "LOCATION"])
 
     row = 2
     for doc in docs:

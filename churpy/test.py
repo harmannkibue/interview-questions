@@ -65,10 +65,11 @@ class ParseTernary:
         """
 
         stack = []
-        for c in self.expression[::-1]:
-            # Todo: Create a descend parse tree for the cleaned expression data and identify base case for recusrsion
-            print("THe C iss ", c)
-            pass
+        print(self.clean_expression_data)
+        # for c in self.expression[::-1]:
+        #     # Todo: Create a descend parse tree for the cleaned expression data and identify base case for recusrsion
+        #     print("THe C iss ", c)
+        #     pass
 
 
 # Input for testing the class functionality

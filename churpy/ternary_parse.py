@@ -1,4 +1,5 @@
 import re
+import ast
 
 """
 -----MY THOUGHT PROCESS TO THE CHALLENGE----
@@ -25,7 +26,6 @@ class ParseTernary:
         self.expression = expression
         self.variable_dict = self.clean_variable_dictionary
         self.cleaned_tenary_expression = self.clean_expression_data
-
 
     @property
     def clean_variable_dictionary(self) -> dict:
@@ -58,17 +58,16 @@ class ParseTernary:
 
         return new_match_list
 
-    def parse_ternary(self):
+    def parse_ifs(self, input):
+        pass
+
+    def parse_ternary(self, input_text:str):
         """
         :type expression: str
         :rtype: str
         """
 
-        stack = []
-        for c in self.expression[::-1]:
-            # Todo: Create a descend parse tree for the cleaned expression data and identify base case for recusrsion
-            print("THe C iss ", c)
-            pass
+        print(self.clean_expression_data)
 
 
 # Input for testing the class functionality
@@ -87,9 +86,3 @@ if (var_1 == 2, 0, if (var_2 == 4, 15, 0))
 
 c = ParseTernary(input)
 c.parse_ternary()
-
-
-
-
-
-
