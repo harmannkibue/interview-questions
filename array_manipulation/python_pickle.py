@@ -13,4 +13,3 @@ def pickle_object():
 
 if __name__ == "__main__":
     pickle_object()
-    "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"
